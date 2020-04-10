@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['about'] = 'about';
 $route['olahdata'] = 'olahdata';
+$route['route'] = 'route';

@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">GIS Kota Pati</a> 
+                <a class="navbar-brand" href="<?=base_url()?>">GIS Kota Pati</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
