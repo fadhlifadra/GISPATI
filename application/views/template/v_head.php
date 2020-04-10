@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="<?=base_url()?>assets/leaflet/leaflet.css" />
     <script src="<?=base_url()?>assets/leaflet/leaflet.js"></script>
     <!-- ROUTING LEAFLET -->
-    <link rel="stylesheet" href="<?=base_url()?>assets/leaflet-rm/dist/leaflet-routing-machine.css" />
-    <script src="<?=base_url()?>assets/leaflet-rm/dist/leaflet-routing-machine.js"></script>
+    <link rel="stylesheet" href="<?=base_url()?>node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <script src="<?=base_url()?>node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
 
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
