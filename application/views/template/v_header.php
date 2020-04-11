@@ -13,5 +13,5 @@
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> &nbsp; <a href="<?=base_url('login/logout')?>" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> <p>Halo, <?php echo $this->session->userdata('username') ?></p>&nbsp; <a href="<?=base_url('login/logout')?>" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>

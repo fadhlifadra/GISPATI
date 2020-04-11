@@ -33,32 +33,31 @@
                     <?php } ?>
                     <label for="">Nama Lengkap</label>
                     <div class="form-group has-feedback">
-                        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap"/>
+                        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required=""/>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <label for="">Username</label>
                     <div class="form-group has-feedback">
-                        <input type="text" name="username" class="form-control" placeholder="Username"/>
+                        <input type="text" name="username" class="form-control" placeholder="Username" required=""/>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <label for="">Password</label>
                     <div class="form-group has-feedback">
-                        <input type="password" name="password" class="form-control" placeholder="Password"/>
-                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    </div>    
-                    <label for="">Confirm Password</label>                
-                    <div class="form-group has-feedback">
-                        <input type="password" name="password" class="form-control" placeholder=" Re-type Password"/>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required=""/>
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-8">                   
+                        <div class="col-xs-4">
+                            
+                        </div><!-- /.col -->
+                        <div class="col-xs-4">
                         </div><!-- /.col -->
                         <div class="col-xs-4">
                             <button type="submit" class="btn btn-primary btn-block btn-flat">Sign Up</button>
                         </div><!-- /.col -->
                     </div>
+                    <a href="<?=base_url('login')?>">Back</a>
                 </form>
         </div><!-- /.login-box -->
         <!-- jQuery 2.1.3 -->

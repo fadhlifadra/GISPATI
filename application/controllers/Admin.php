@@ -11,6 +11,10 @@ class Admin extends CI_Controller{
 	}
  
 	function index(){
-		$this->load->view('v_home');
+		$data = array(
+            'title' => 'Map View',
+            'isi' => 'v_admin'
+        );
+        $this->load->view('template/v_wrapper', $data, FALSE);
 	}
 }
