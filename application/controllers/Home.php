@@ -1,13 +1,14 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Home extends CI_Controller {
-	public function __construct() 
-	{
+<?php 
+ 
+class Home extends CI_Controller{
+ 
+	function __construct(){
 		parent::__construct();
-		$this->load->library('session');
+	
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
-
 	public function index()
 	{
         $data = array(
