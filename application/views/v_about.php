@@ -5,7 +5,7 @@
                     <i class="fa fa-user"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">Dwi </br>Supardiono</p>
+                    <p class="main-text">Dwi </br>Supardiyono</p>
                     <p class="text-muted">21120117120024</p>
                 </div>
              </div>
