@@ -50,7 +50,10 @@ class Login extends CI_Controller{
  
 		}
 		else{
-			echo "Username dan password salah !";
+			// echo "Username dan password salah !";
+			$data['error'] = '<div class="alert alert-danger" style="margin-top: 3px">
+						<div class="header"><b><i class="fa fa-exclamation-circle"></i> ERROR</b> ID User atau Password Salah!</div></div>';
+						$this->load->view('v_login', $data);
 		}
 	}
  
