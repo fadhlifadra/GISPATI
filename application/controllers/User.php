@@ -64,7 +64,7 @@
                     // Set message
                     $this->session->set_flashdata('user_loggedin','Selamat Anda Berhasil Login');
 
-                    redirect('berita');
+                    redirect('home');
                 } else {
                     // Set message
                     $this->session->set_flashdata('login_failed', '<div class="alert   

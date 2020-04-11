@@ -31,12 +31,13 @@
                             <?php echo $this->session->flashdata('result_login'); ?>
                         </div>
                     <?php } ?>
+                    <?php if(isset($error)) { echo $error; }; ?>
                     <div class="form-group has-feedback">
-                        <input type="text" name="username" class="form-control" placeholder="Username"/>
+                        <input type="text" name="username" class="form-control" placeholder="Username" required="" <?php echo form_error('username'); ?>/>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="password" name="password" class="form-control" placeholder="Password"/>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required="" <?php echo form_error('password'); ?>/>
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     </div>
                     <div class="row">
