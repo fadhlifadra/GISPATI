@@ -10,14 +10,24 @@
                     <li>
                         <a  href="<?=base_url('home')?>"><i class="fa fa-globe"></i>Map View</a>
                     </li>
-                      <li>
-                        <a  class="active-menu" href="<?=base_url('olahdata')?>"><i class="fa fa-desktop"></i> Olah Data</a>
-                    </li>
                     <li>
                         <a  href="<?=base_url('route')?>"><i class="fa fa-map-marker"></i> Rute</a>
                     </li>
                     <li>
                         <a  href="<?=base_url('about')?>"><i class="fa fa-users"></i> About Us</a>
+                    </li>
+                    <li>
+                        <a  href="<?=base_url('olahdata')?>"><i class="fa fa-desktop"></i> Info Kota Pati<span class="fa-arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="<?=base_url('olahdata/datakab')?>">Data Kabupaten dan Kota Pati</a>
+                            </li>
+                            <li>
+                                <a href="<?=base_url('olahdata/datamall')?>">Data Mall Pati</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Link</a>
+                            </li>
                     </li>
 						   <!-- <li  >
                         <a  href="chart.html"><i class="fa fa-bar-chart-o"></i> Morris Charts</a>
