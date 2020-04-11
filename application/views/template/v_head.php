@@ -29,4 +29,8 @@
       <!-- CUSTOM SCRIPTS -->
     <script src="<?=base_url()?>assets/js/custom.js"></script>
 
+    <!-- DATA TABLE SCRIPTS -->
+    <link href='https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css' rel='stylesheet' type='text/css' />
+    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
 </head>
