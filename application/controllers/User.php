@@ -16,84 +16,84 @@
             $this->form_validation->set_rules('password1', 'Confirm Password', 'matches[password]');
 
             if($this->form_validation->run() === FALSE){
-                $this->load->view('templates/head');
-                $this->load->view('register', $data);
+            //    $this->load->view('templates/head');
+                $this->load->view('v_register', $data);
             } else {
                 // Encrypt password
                 $enc_password = md5($this->input->post('password'));
 
-                $this->user_model->register($enc_password);
+                $this->m_user->register($enc_password);
 
                 // Set message
-                $this->session->set_flashdata('user_registered', 'You are now registered and can log in');
+                $this->session->set_flashdata('success_register', 'Akun anda sudah terdaftar, Silakan login');
 
                 redirect('login');
             }
         }
 
         // Log in user
-        public function login(){
-            $data['title'] = 'Sign In';
+        //public function login(){
+        //    $data['title'] = 'Sign In';
 
-            $this->form_validation->set_rules('username', 'Username', 'required');
-            $this->form_validation->set_rules('password', 'Password', 'required');
+        //    $this->form_validation->set_rules('username', 'Username', 'required');
+        //    $this->form_validation->set_rules('password', 'Password', 'required');
 
-            if($this->form_validation->run() === FALSE){
-                $this->load->view('templates/header');                    
-                $this->load->view('login', $data);
+        //    if($this->form_validation->run() === FALSE){
+        //        $this->load->view('templates/header');                    
+        //         $this->load->view('login', $data);
                     
-            } else {
+        //    } else {
                 
                 // Get username
-                $username = $this->input->post('username');
+        //        $username = $this->input->post('username');
                 // Get and encrypt the password
-                $password = md5($this->input->post('password'));
+        //        $password = md5($this->input->post('password'));
 
                 // Login user
-                $user_id = $this->user_model->login($username, $password);
+        //        $user_id = $this->user_model->login($username, $password);
 
-                if($user_id){
+        //        if($user_id){
                     // Create session
-                    $user_data = array(
-                        'user_id' => $user_id,
-                        'username' => $username,
-                        'logged_in' => true
-                    );
+        //            $user_data = array(
+        //                'user_id' => $user_id,
+        //                'username' => $username,
+        //                'logged_in' => true
+        //            );
 
-                    $this->session->set_userdata($user_data);
+        //            $this->session->set_userdata($user_data);
 
                     // Set message
-                    $this->session->set_flashdata('user_loggedin','Selamat Anda Berhasil Login');
+        //            $this->session->set_flashdata('user_loggedin','Selamat Anda Berhasil Login');
 
-                    redirect('home');
-                } else {
+        //            redirect('home');
+        //        } else {
                     // Set message
-                    $this->session->set_flashdata('login_failed', '<div class="alert   
+        //            $this->session->set_flashdata('login_failed', '<div class="alert   
 
-           alert-danger text-center">username dan password salah!</div>');
+        //   alert-danger text-center">username dan password salah!</div>');
 
-                    redirect('login');
-                }        
-            }
-        }
+        //            redirect('login');
+        //        }        
+        //    }
+        //}
 
         // Log user out
-        public function logout(){
+        //public function logout(){
             // Unset user data
-            $this->session->unset_userdata('logged_in');
-            $this->session->unset_userdata('user_id');
-            $this->session->unset_userdata('username');
+        //    $this->session->unset_userdata('logged_in');
+        //    $this->session->unset_userdata('user_id');
+        //    $this->session->unset_userdata('username');
 
             // Set message
-            $this->session->set_flashdata('user_loggedout', 'You are now logged out');
+        //    $this->session->set_flashdata('user_loggedout', 'You are now logged out');
 
-            redirect('login');
-        }
+        //    redirect('login');
+        //}
 
         // Check if username exists
         public function check_username_exists($username){
-            $this->form_validation->set_message('check_username_exists', 'Username Sudah diambil. Silahkan gunakan username lain');
-            if($this->user_model->check_username_exists($username)){
+            $this->form_validation->set_message('check_username_exists', 'Username Sudah Ada. Silahkan gunakan Username lain');
+            if($this->m_user->check_username_exists($username)){
                 return true;
             } else {
                 return false;

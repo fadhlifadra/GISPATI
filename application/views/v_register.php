@@ -20,35 +20,37 @@
             </div><!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg">Sign Up to start your journey </p>
-                <form action="<?php echo site_url('login'); ?>" method="post">
+                <form action="<?php echo site_url('user/register'); ?>" method="post">
                     <?php
-                    if (validation_errors() || $this->session->flashdata('result_login')) {
+                    if (validation_errors() || $this->session->flashdata('result_register')) {
                         ?>
-                        <div class="alert alert-error">
+                        <div class="alert alert-danger">
                             <button type="button" class="close" data-dismiss="alert">&times;</button>
                             <strong>Warning!</strong>
                             <?php echo validation_errors(); ?>
-                            <?php echo $this->session->flashdata('result_login'); ?>
+                            <?php echo $this->session->flashdata('result_register'); ?>
                         </div>
                     <?php } ?>
+                    
+                    <?php if(isset($error)) { echo $error; }; ?>
                     <label for="">Nama Lengkap</label>
                     <div class="form-group has-feedback">
-                        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required=""/>
+                        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required="" /> <?php echo form_error('nama'); ?>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <label for="">Username</label>
                     <div class="form-group has-feedback">
-                        <input type="text" name="username" class="form-control" placeholder="Username" required=""/>
+                        <input type="text" name="username" class="form-control" placeholder="Username" required="" /> <?php echo form_error('username'); ?>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <label for="">Password</label>
                     <div class="form-group has-feedback">
-                        <input type="password" name="password" class="form-control" placeholder="Password" required=""/>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required="" /> <?php echo form_error('password'); ?>
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     </div>
                     <label for="">Confirm Password</label>
                     <div class="form-group has-feedback">
-                        <input type="password" name="password1" class="form-control" placeholder="Re-type Password" required=""/>
+                        <input type="password" name="password1" class="form-control" placeholder="Re-type Password" required="" /> <?php echo form_error('password1'); ?>
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     </div>
 

@@ -22,13 +22,13 @@
                 <p class="login-box-msg">Sign in to start your session </p>
                 <form action="<?php echo site_url('login/aksi_login'); ?>" method="post">
                     <?php
-                    if (validation_errors() || $this->session->flashdata('result_login')) {
+                    if (validation_errors() || $this->session->flashdata('success_register')) {
                         ?>
-                        <div class="alert alert-error">
+                        <div class="alert alert-success">
                             <button type="button" class="close" data-dismiss="alert">&times;</button>
-                            <strong>Warning!</strong>
+                            <strong>INFO!</strong>
                             <?php echo validation_errors(); ?>
-                            <?php echo $this->session->flashdata('result_login'); ?>
+                            <?php echo $this->session->flashdata('success_register'); ?>
                         </div>
                     <?php } ?>
                     <?php if(isset($error)) { echo $error; }; ?>
