@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Route extends CI_Controller {
+class Route1 extends CI_Controller {
 	public function __construct() 
 	{
 		parent::__construct();
@@ -12,8 +12,8 @@ class Route extends CI_Controller {
 	{
         $data = array(
             'title' => 'Route',
-            'isi' => 'v_route'
+            'isi' => 'v_route1'
         );
-        $this->load->view('template/v_wrapper_user', $data, FALSE);
+        $this->load->view('template/v_wrapper', $data, FALSE);
 	}
 }

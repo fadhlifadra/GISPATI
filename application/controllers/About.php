@@ -14,6 +14,6 @@ class About extends CI_Controller {
             'title' => 'About Us',
             'isi' => 'v_about'
         );
-        $this->load->view('template/v_wrapper2', $data, FALSE);
+        $this->load->view('template/v_wrapper_user', $data, FALSE);
 	}
 }

@@ -13,3 +13,36 @@
 
 <iframe width="100%" height="520" frameborder="0" src="https://fadhlifadra.carto.com/builder/10d97ff9-58e1-40bb-bf9e-509aef7eb48c/embed" 
 allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>ID Carto</th>
+                    <th>Kecamatan</th>
+                    <th>Kelurahan</th>
+                    <th>Kabupaten/Kota</th>
+                    <th>Provinsi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $no = 1;
+                foreach ($data_gis as $coba)
+                ?>
+                <tr>
+                    <td><?php echo $no++;?></td>
+                    <td><?php echo $coba->cartodb_id;?></td>
+                    <td><?php echo $coba->namobj;?></td>
+                    <td><?php echo $coba->wadmkc;?></td>
+                    <td><?php echo $coba->wadmkk;?></td>
+                    <td><?php echo $coba->wadmpr;?></td>
+                </tr>
+            </tbody>
+        </table>
+
+    <script>
+    $(document).ready(function(){
+        $('#example').DataTable();
+    });
+    </script>

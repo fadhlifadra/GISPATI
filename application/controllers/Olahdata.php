@@ -16,7 +16,7 @@ class Olahdata extends CI_Controller {
             'isi' => 'v_olahdata',
             'data_olah' => $this->web->get_olah_data()
         );
-        $this->load->view('template/v_wrapper1', $data, FALSE);
+        $this->load->view('template/v_wrapper', $data, FALSE);
 	}
 	// public function datakab()
 	// {

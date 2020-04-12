@@ -8,16 +8,16 @@
 				
 					
                     <li>
-                        <a  class="active-menu" href="<?=base_url('home')?>"><i class="fa fa-globe"></i>Info Administrasi</a>
+                        <a  href="<?=base_url('admin')?>"><i class="fa fa-globe"></i>Info Administrasi</a>
                     </li>
                       <li>
                         <a  href="<?=base_url('olahdata')?>"><i class="fa fa-desktop"></i> Olah Data<span class="fa-arrow"></span></a>
                     </li>                    
                     <li>
-                        <a  href="<?=base_url('route')?>"><i class="fa fa-map-marker"></i> Rute</a>
+                        <a  href="<?=base_url('route1')?>"><i class="fa fa-map-marker"></i> Rute</a>
                     </li>
                     <li>
-                        <a  href="<?=base_url('about')?>"><i class="fa fa-users"></i> About Us</a>
+                        <a  href="<?=base_url('about1')?>"><i class="fa fa-users"></i> About Us</a>
                     </li>
 						   <!-- <li  >
                         <a  href="chart.html"><i class="fa fa-bar-chart-o"></i> Morris Charts</a>

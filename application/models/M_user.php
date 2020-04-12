@@ -1,5 +1,5 @@
 <?php
- class User_model extends CI_Model{
+ class M_user extends CI_Model{
   public function register($enc_password){
    // User data array
    $data = array(

@@ -62,8 +62,8 @@ if(curlocation[0]==0 && curlocation[1]==0){
                     <th>ID</th>
                     <th>Nama Lokasi</th>
                     <th>Alamat</th>
-                    <th>Latitude</th>
                     <th>Longitude</th>
+                    <th>Latitude</th>
                     <th>Action</th>
                 </tr>
             </thead>

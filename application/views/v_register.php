@@ -46,6 +46,11 @@
                         <input type="password" name="password" class="form-control" placeholder="Password" required=""/>
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     </div>
+                    <label for="">Confirm Password</label>
+                    <div class="form-group has-feedback">
+                        <input type="password" name="password1" class="form-control" placeholder="Re-type Password" required=""/>
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    </div>
 
                     <div class="row">
                         <div class="col-xs-4">

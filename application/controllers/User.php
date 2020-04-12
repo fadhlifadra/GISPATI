@@ -13,6 +13,7 @@
             $this->form_validation->set_rules('nama', 'Nama', 'required');
             $this->form_validation->set_rules('username', 'Username', 'required|callback_check_username_exists');
             $this->form_validation->set_rules('password', 'Password', 'required');
+            $this->form_validation->set_rules('password1', 'Confirm Password', 'matches[password]');
 
             if($this->form_validation->run() === FALSE){
                 $this->load->view('templates/head');
@@ -91,21 +92,11 @@
 
         // Check if username exists
         public function check_username_exists($username){
-            $this->form_validation->set_message('check_username_exists', 'Usrname Sudah diambil. Silahkan gunakan username lain');
+            $this->form_validation->set_message('check_username_exists', 'Username Sudah diambil. Silahkan gunakan username lain');
             if($this->user_model->check_username_exists($username)){
                 return true;
             } else {
                 return false;
             }
         }
-
-        // Check if email exists
-        public function check_email_exists($email){
-            $this->form_validation->set_message('check_email_exists', 'Email Sudah diambil. Silahkan gunakan email lain');
-            if($this->user_model->check_email_exists($email)){
-                return true;
-            } else {
-                return false;
-            }
         }
-    }

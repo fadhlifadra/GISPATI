@@ -8,12 +8,14 @@ class Admin extends CI_Controller{
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("login"));
 		}
+		$this->load->model('web');
 	}
  
 	function index(){
 		$data = array(
-            'title' => 'Map View',
-            'isi' => 'v_admin'
+            'title' => 'Info Adminstrasi Kota Pati',
+			'isi' => 'v_admin',
+			'data_gis' => $this->web->get_all_data()
         );
         $this->load->view('template/v_wrapper', $data, FALSE);
 	}
