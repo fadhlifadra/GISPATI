@@ -7,6 +7,9 @@ class Olahdata extends CI_Controller {
 		parent::__construct();
         $this->load->library('session');
         $this->load->model('web');
+        if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
 	}
 
 	public function index()
